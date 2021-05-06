@@ -1,12 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Probability and Statistics</title>
+    <title>CITS5505 Agile Web Development</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/stylepage1.css">
 </head>
-<body>
-    
+
+<body data-spy="scroll" data-target="#myScrollspy">
+    <div class="container title">
+        <div class="row">
+            <div id="logo" class="col-md-4">
+                <h1>
+                    <a href="index.html">
+                        <p1>CITS5505<p2>Project2</p2>
+                        </p1>
+                    </a>
+                </h1>
+            </div>
+            <div id="myaccount" class="col-md-4 col-md-offset-4">
+                <ul class="nav nav-pills">
+                    <li>
+                        <a href="Myaccount.html" data-toggle="pills">Myaccount</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container navigation">
+        <div class="row">
+            <ul id="navbar" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#home" data-toggle="tab">Home</a>
+                </li>
+                <li>
+                    <a href="#probability" data-toggle="tab">Probability</a>
+                </li>
+                <li>
+                    <a href="#statistics" data-toggle="tab">Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--the main content of this page, each tab contains a Scroll on the right of the page using a plugin named affix in bootstrap-->
+    <div class="container content">
+        <div id="mytabContent" class="tab-content tabs">
+            <!--fisrt tab-->
+            <div class="tab-pane in active" id="home">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.1 Introduction to Probability and Statistics</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-1-1">P1</a></li>
+                            <li><a href="#section-1-2">P2</a></li>
+                            <li><a href="#section-1-3">P3</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-1-1">P1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id
+                            metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet
+                            sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in
+                            aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+
+                        <hr>
+                        <h2 id="section-1-2">P2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <hr>
+                        <h2 id="section-1-3">P3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <!--second tab-->
+            <div class="tab-pane" id="probability">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.2 probability</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-2-1">Outcome and Expected Value</a></li>
+                            <li><a href="#section-2-2">Rules</a></li>
+                            <li><a href="#section-2-2">Conditional Probability</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-2-1">Outcome and Expected Value</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+
+                        <hr>
+                        <h2 id="section-2-2">Rules</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <h2 id="section-2-3">Conditional Probability</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <!--third tab-->
+            <div class="tab-pane" id="statistics">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.3 Statistics</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-3-1">Discrete and Continuous Variables</a></li>
+                            <li><a href="#section-3-2">Expected Value and Variance</a></li>
+                            <li><a href="#section-3-3">Distributions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-3-1">Discrete and Continuous Variables</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <h2 id="section-3-2">Expected Value and Variance</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <h2 id="section-3-3">Distributions</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at,
+                            luctus dui. Mauris magna
+                            metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
+                            scelerisque non non
+                            purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum
+                            vestibulum. Vivamus
+                            fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo,
+                            blandit at bibendum eu,
+                            tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor.
+                            Integer faucibus ligula.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

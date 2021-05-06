@@ -1,0 +1,227 @@
+body{
+    background: #f6f6f6;
+}
+
+/*design for title*/
+
+.title{
+    width: 100%;
+    max-width: 1260px;
+    min-width: 755px;
+    margin:auto;
+    overflow:hidden;
+    padding:0 0 0 0;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background: #f6f6f6;
+}
+
+#logo{padding:0 0 0 0;
+    position: relative;
+    left: 18px;
+    top: -8px;
+}
+
+/*remove the underscore for logo*/
+.title h1 a:link {
+    text-decoration: none;
+  }
+  
+.title h1 a:visited {
+    text-decoration: none;
+  }
+.title h1 a:hover {
+    text-decoration: none;
+  }
+  
+.title h1 a:active {
+    text-decoration: none;
+  }
+
+/*title border style*/
+.title h1 a {
+    border-width: 2px;
+    border: solid #ccc; 
+    border-radius: 16px;
+}
+
+/*style for title itself*/
+.title h1 p1{
+    color:rgba(204, 11, 11, 0.87);
+    font-style:italic;
+    font-weight: bold;
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.title h1 p2{
+    color:rgba(68, 65, 63, 0.822);
+    font-weight:bold;
+    font-style:normal;
+    font-size: 40px;
+    font-family:initial
+}
+
+/* sytle for myaccount*/
+#myaccount{
+    padding:0 0 0 0;
+    height:75px
+
+}
+
+#myaccount .nav-pills{
+    border-style:none;
+    font-size: 20px;
+    border:0px;
+    position: relative;
+    top: 10px;
+    left:280px
+}
+
+#myaccount .nav-pills li a{
+    /*line-height:2;*/
+        color:rgb(39, 39, 39);
+        border:0px #ddd solid;
+        text-align: center
+    }
+
+#myaccount .nav-pills li a:hover{
+    background-color: rgb(168, 168, 168)
+}
+/*design for navi bar*/
+.navigation{
+    background: rgb(66, 66, 66);
+    width:100%;
+    padding:0 0 0 0;
+    position: sticky;
+    top: 75px;
+    z-index: 1000;
+}
+
+.navigation .row {
+    width: 100%;
+    max-width: 1260px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.navigation .nav-tabs{
+    border-style:none;
+    font-size: 18px;
+    border:0px;
+}
+
+.navigation .nav-tabs li{
+    border-style:none
+}
+
+.navigation .nav-tabs li a{
+/*line-height:2;*/
+    color:rgb(255, 255, 255);
+    border:0px #ddd solid;
+    margin-right: 0px;
+    border-radius: 0;
+    width: 115px;
+    text-align: center;
+}
+
+.navigation .nav-tabs .active a{
+    border-color:#3498db !important;
+    background: #3498db !important;
+    color:#fff !important;
+    border:0px !important
+}
+
+.navigation .nav-tabs a:hover:not(.active){
+    background-color: rgb(15, 15, 15);
+}
+
+/*design for Scrollspy*/
+
+#myScrollspy .nav-tabs{
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+#myScrollspy .nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+#myScrollspy .nav-tabs li:first-child{
+    border-top: none;
+}
+#myScrollspy .nav-tabs li a{
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+#myScrollspy .nav-tabs li.active a, #myScrollspy .nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+#myScrollspy .nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+#myScrollspy .nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+#myScrollspy .nav-tabs.affix{
+    top: 130px; /* Set the top position of pinned element */
+}
+
+
+/*design for content*/
+
+/*this is to adjust the position of scroll spy and click*/
+h2 {padding-top: 140px; margin-top: -120px;}
+
+.content-title{
+    border-style:solid !important;
+    border-width:0px !important;
+    border-color: lightgray;
+    border-radius: 16px;
+    height: 100px;
+    background-color: rgba(126, 139, 151, 0.425);
+}
+
+.content-title h1{
+    position: relative;
+    top: 20px;
+    left:20px;
+    font-size: 50px;
+}
+.content{
+    width: 100%;
+    max-width: 1260px;
+    min-width: 755px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding:0 0 0 0
+}
+
+.tab-pane{
+    background:#fff;
+    border: 1.5px solid #e7eaf1;
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius:12px
+}
+/*
+.para{
+    border-bottom-style:groove;
+    border-bottom-width:1px;
+    border-bottom-color: rgba(95, 158, 160, 0.767);
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+*/
+
+p{
+    font-size:16px
+}
