@@ -1,9 +1,10 @@
 import os
 import sqlite3
-from flask import Flask,render_template, request, redirect,session
+from flask import Flask,render_template, request, redirect,session,url_for
 
 app = Flask(__name__, instance_path=os.path.abspath(__file__))
 app.secret_key='yaogeandmingbozhang' #set the key for login
+app.debug= True
 
 @app.route('/',methods=['GET','POST'])
 def welcome():
@@ -21,13 +22,13 @@ def welcome():
 def index():
     user_info = session.get('user_info')
     if not user_info:
-        return redirect('/welcome')
+        return redirect('/')
     return render_template('index.html')
 
 @app.route('/logout')
 def logout():
     del session['user_info']
-    return redirect('/welcome')
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run()
