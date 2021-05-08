@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- templates/home.html -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+<DOCTYPE html>
+    <html lang="zh-han">
 
-</head>
+    <head>
+        <title>主页</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 
-<body>
-    <h1>please login</h1>
-    <p>for test version now the user is "user", passwprd is "password".</p>
-    <form method="post">
-        <input type="text" name="user">
-        <input type="password" name="pwd">
-        <input type="submit" value="login">
-    </form>
-    {{msg}}
-</body>
+    <body>
+        {% if username %}
+        <p>{{username}}，欢迎来到主页！ <a href="{{ url_for('panel') }}">个人中心</a> <a href="{{ url_for('logout') }}">注销</a></p>
+        {% else %}
+        <p>欢迎来到主页！ <a href="{{ url_for('login') }}">登录</a> <a href="{{ url_for('regist') }}">注册</a></p>
+        {% endif %}
+    </body>
 
-</html>
+    </html>
