@@ -1,25 +1,65 @@
 <DOCTYPE html>
-    <html lang="zh-han">
+    <html>
 
     <head>
-        <title>注册</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <title>regist</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../static/css/stylepage1.css">
     </head>
 
     <body>
-        <form method="post" action='/regist'>
-            <label>用户名：<input type="text" name="username" value=""></label></br>
-            <label>密码：<input type="password" name="password1" value=""></label></br>
-            <label>重复密码：<input type="password" name="password2" value=""></label></br>
-            <label>邮箱：<input type="email" name="email" value=""></label></br>
-            <input type="submit" value="注册">
-        </form>
+        <!-- title-->
+        <div class="container title">
+            <div class="row">
+                <div id="logo" class="col-md-4">
+                    <h1>
+                        <a href="{{ url_for('index')}}">
+                            <p1>CITS5505<p2>Project2</p2>
+                            </p1>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="container navigation">
+            <div class="row">
+                <ul id="navbar" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#register" data-toggle="tab">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- body part-->
+        <div class="container content">
+            <div id="mytabContent" class="tab-content tabs">
+                <div class="tab-pane in active" id="register">
+                    <div class="row">
+                        <div class=" col-md-4 col-md-offset-4">
+                            <form method="post" action='/regist'>
+                                <label>Username：<input type="text" name="username" value=""></label></br>
+                                <label>Password：<input type="password" name="password1" value=""></label></br>
+                                <label>Repeat password：<input type="password" name="password2" value=""></label></br>
+                                <label>Email Address：<input type="email" name="email" value=""></label></br>
+                                <input type="submit" value="Register">
+                            </form>
 
-        {% if error %}
-        <p>{{error}}</p>
-        {% endif %}
+
+                            {% if error %}
+                            <p>{{error}}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
     </html>

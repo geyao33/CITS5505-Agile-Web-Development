@@ -1,20 +1,59 @@
 <!-- templates/panel.html -->
 
 <DOCTYPE html>
-    <html lang="zh-han">
+    <html>
 
     <head>
-        <title>个人中心</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <title>Account panel</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../static/css/stylepage1.css">
     </head>
 
     <body>
-        <h3>个人中心</h3>
-        <p>姓名：{{user.username}}</p>
-        <p>密码：{{user.password}}</p>
-        <p>邮箱：{{user.email}}</p>
+        <!-- title-->
+        <div class="container title">
+            <div class="row">
+                <div id="logo" class="col-md-4">
+                    <h1>
+                        <a href="{{ url_for('index')}}">
+                            <p1>CITS5505<p2>Project2</p2>
+                            </p1>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="container navigation">
+            <div class="row">
+                <ul id="navbar" class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#account" data-toggle="tab">Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- body part-->
+        <div class="container content">
+            <div id="mytabContent" class="tab-content tabs">
+                <div class="tab-pane in active" id="accountr">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <h3>Your account</h3>
+                            <p>Username：{{user.username}}</p>
+                            <p>Password：{{user.password}}</p>
+                            <p>Email：{{user.email}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
     </html>
