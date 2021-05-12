@@ -49,6 +49,12 @@
                             <p>Username：{{user.username}}</p>
                             <p>Password：{{user.password}}</p>
                             <p>Email：{{user.email}}</p>
+                            <p>Your favorits:<br>
+                                {% for page in favor %}
+                                <!-- 如何连接到指定page还没想好-->
+                                <a>{{ page.favorite }}</a>
+                                {% endfor %}
+                            </p>
                         </div>
                     </div>
                 </div>
