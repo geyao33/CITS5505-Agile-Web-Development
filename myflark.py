@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.secret_key='yaogeandmingbozhang' #set the key for login
 db = SQLAlchemy(app)
 
-# 定义ORM
+# ORM
 class User(db.Model):
     __tablename__ = 'users'
 
@@ -40,9 +40,9 @@ class Favor(db.Model):
         return '<Favor %r>' % self.favorite
 
         
-# 创建表格、插入数据
+# DB and tables
 def create_db():
-    db.drop_all()  # 每次运行，先删除再创建
+    db.drop_all()  # delete and create new DB when start
     db.create_all()
     
     admin = User(username='admin', password='root', email='admin@example.com')
@@ -64,7 +64,7 @@ def create_db():
 create_db()
 
 
-# 登录检验（用户名、密码验证）
+# check the login
 def valid_login(username, password):
     user = User.query.filter(and_(User.username == username, User.password == password)).first()
     if user:
@@ -73,7 +73,7 @@ def valid_login(username, password):
         return False
 
 
-# 注册检验（用户名、邮箱验证）
+# check the registration
 def valid_regist(username, email):
     user = User.query.filter(or_(User.username == username, User.email == email)).first()
     if user:
@@ -82,12 +82,12 @@ def valid_regist(username, email):
         return True
 
 
-# 主页
+# welcome page
 @app.route('/')
 def home():
     return render_template('welcome.html', username=session.get('username'))
 
-## 注册
+## regist
 @app.route('/regist', methods=['GET','POST'])
 def regist():
     error = None
@@ -105,7 +105,8 @@ def regist():
             error = 'username or email had been used！'
     
     return render_template('regist.html', error=error)
-#登录
+
+#login
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -119,7 +120,7 @@ def login():
 
     return render_template('login.html', error=error)
 
-#主页
+#index
 @app.route('/index')
 def index():
     user_info = session.get('username')
@@ -128,37 +129,37 @@ def index():
 
     return render_template('index.html')   
 
-# 注销
+#logout
 @app.route('/logout')
 def logout():
     session.pop('username', None)
     return redirect(url_for('home'))
 
-# 个人中心
+#account panel
 @app.route('/panel')
 def panel():
     username = session.get('username')
     if not username:
         return redirect('/')
     
-    #返回的是列表
+    #the query return a list
     user = User.query.filter(User.username == username).first()
     favor= db.session.query(Favor).filter(Favor.username == username).all()
     
     return render_template("panel.html", user=user,favor=favor)
 
 
-#试题1
+#test page1
 @app.route('/page1', methods=['GET', 'POST'])
 def add():
     MSG = None
     username = session.get('username')
     if not username:
         return redirect('/')
-    #收藏功能
+    #add to favor funtion
     user = User.query.filter(User.username == username).first()
     favor= db.session.query(Favor).filter(Favor.username == username).all()
-    #如果没有收藏，那么添加搜藏，如果有添加，那么删除
+    #if added then drop, if havent added then add
 
     if request.method == 'POST':
         page="page1"
