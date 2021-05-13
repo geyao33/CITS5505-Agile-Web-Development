@@ -76,3 +76,9 @@ if page in C:
     print("yes")
 
 print(user)
+temp = db.session.query(Favor).filter(and_(Favor.username == 'guest1', Favor.favorite == "page1")).first()
+print(a)
+print(temp)
+db.session.delete(temp)
+db.session.commit()
+print(db.session.query(Favor).filter(Favor.username == 'guest1').all())

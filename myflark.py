@@ -150,7 +150,7 @@ def panel():
 
 #试题1
 @app.route('/page1', methods=['GET', 'POST'])
-def page1():
+def add():
     MSG = None
     username = session.get('username')
     if not username:
@@ -158,7 +158,7 @@ def page1():
     #收藏功能
     user = User.query.filter(User.username == username).first()
     favor= db.session.query(Favor).filter(Favor.username == username).all()
-    #如果没有收藏，那么添加搜藏，如果有添加，显示已经添加
+    #如果没有收藏，那么添加搜藏，如果有添加，那么删除
 
     if request.method == 'POST':
         page="page1"
@@ -167,16 +167,19 @@ def page1():
             b=favor[i].favorite
             temp.append(b)
         if page in temp:
-        #已经搜藏显示
-            MSG='Already add to Favor'
+            fav = db.session.query(Favor).filter(and_(Favor.username == user.username, Favor.favorite == page)).first()
+            db.session.delete(fav)
+            db.session.commit()
+            MSG='Successful dropping'
         else:
             fav = Favor(username=user.username, favorite=page)
             fav.us=user
             db.session.add(fav)
             db.session.commit()
             MSG='Successful adding'
-
+ 
     return render_template("page1.html",MSG=MSG)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
