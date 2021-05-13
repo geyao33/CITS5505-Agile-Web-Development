@@ -51,9 +51,9 @@
                             <p>Email：{{user.email}}</p>
                             <p>Your favorits:<br>
                                 {% for page in favor %}
-                                <!-- 如何连接到指定page还没想好-->
+                                <!-- link to its relative pgae-->
 
-                                <a>{{ page.favorite }}</a>
+                                <a href="{{ url_for('test',numberpage=page.favorite) }}">{{ page.favorite }}</a>
 
                                 {% endfor %}
                             </p>

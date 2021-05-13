@@ -121,13 +121,15 @@ def login():
     return render_template('login.html', error=error)
 
 #index
-@app.route('/index')
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     user_info = session.get('username')
     if not user_info:
         return redirect('/')
+    page1="page1"
+    page2="page2"
 
-    return render_template('index.html')   
+    return render_template('index.html',page1=page1,page2=page2)   
 
 #logout
 @app.route('/logout')
@@ -151,7 +153,7 @@ def panel():
 
 #test page
 @app.route('/test/<numberpage>', methods=['GET', 'POST'])
-def add(numberpage):
+def test(numberpage):
     pagefile= numberpage+'.html'
     MSG = None
     username = session.get('username')
