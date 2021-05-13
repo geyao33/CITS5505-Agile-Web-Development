@@ -149,9 +149,10 @@ def panel():
     return render_template("panel.html", user=user,favor=favor)
 
 
-#test page1
-@app.route('/page1', methods=['GET', 'POST'])
-def add():
+#test page
+@app.route('/test/<numberpage>', methods=['GET', 'POST'])
+def add(numberpage):
+    pagefile= numberpage+'.html'
     MSG = None
     username = session.get('username')
     if not username:
@@ -162,7 +163,7 @@ def add():
     #if added then drop, if havent added then add
 
     if request.method == 'POST':
-        page="page1"
+        page=numberpage
         temp=[]
         for i in range(len(favor)):
             b=favor[i].favorite
@@ -179,7 +180,7 @@ def add():
             db.session.commit()
             MSG='Successful adding'
  
-    return render_template("page1.html",MSG=MSG)
+    return render_template(pagefile,MSG=MSG)
     
 
 if __name__ == '__main__':
