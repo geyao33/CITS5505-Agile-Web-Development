@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CITS5505 Agile Web Development</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/css/stylepage1.css">
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+    <div class="container title">
+        <div class="row">
+            <div id="logo" class="col-md-4">
+                <h1>
+                    <a href="{{ url_for('index')}}">
+                        <p1>CITS5505<p2>Project2</p2>
+                        </p1>
+                    </a>
+                </h1>
+            </div>
+            <div id="myaccount" class="col-md-4 col-md-offset-4">
+                <ul class="nav nav-pills">
+                    <li>
+                        <a href="{{ url_for('panel')}}" data-toggle="pills">Myaccount</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('logout')}}" data-toggle="pills">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container navigation">
+        <div class="row">
+            <ul id="navbar" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#home" data-toggle="tab">Home</a>
+                </li>
+                <li>
+                    <a href="#probability" data-toggle="tab">Probability</a>
+                </li>
+                <li>
+                    <a href="#statistics" data-toggle="tab">Statistics</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--the main content of this page, each tab contains a Scroll on the right of the page using a plugin named affix in bootstrap-->
+    <div class="container content">
+        <div id="mytabContent" class="tab-content tabs">
+            <!--fisrt tab-->
+            <div class="tab-pane in active" id="home">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.1 Introduction to Probability and Statistics</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-1-1">Probability</a></li>
+                            <li><a href="#section-1-2">Statistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-1-1">Probability</h2>
+                        <p>In the nature and society, there are many events will happen certianly. For example, when we
+                            throw a stone upward, it must move dowanward at the end. Two like electric charges will
+                            repel
+                            each other. However, there are some other different events will happen uncertianly, such as,
+                            when we toss a coin, we cannot tell it will land on heads or tails. or When we toss a dice,
+                            we cannot tell which number it will land on. Therefore, we need probability to describe how
+                            likely something is to happen.
+                        </p>
+                        <p><b>Probability of an event = (# of ways it can happen)/(Total number of outcomes)</b>
+                            <br>P(A) = (# of ways A can happen)/(Total number of outcomes)
+                        </p>
+                        <p> <b>Example 1</b>
+                            <br> When rolling one dice, there are six outcomes.
+                            <br> 1, 2, 3, 4, 5, 6
+                            <br>What is the probability of rolling a one?
+                            <br> P(1) = 1/6
+                            <br>what is the probability of rolling a one or six?
+                            <br> P(1 or 6) = 2/6 = 1/3
+                        <p> <b> Example 2</b>
+                            <br> When tossing two coins, there are four outcomes.
+                            <br> head and head, head and tail, tail and head, tail and tail.
+                            <br> What is the probability of tossing a head and a tail?
+                            <br> P(head and tail) = 2/4 = 1/2
+                        </p>
+                        </p>
+                        <hr>
+                        <h2 id="section-1-2">Statistics</h2>
+                        <p>Statistics is the discipline that concerns the collection, organization, analysis,
+                            interpretation,
+                            and presentation of data. In applying statistics to a scientific, industrial, or social
+                            problem,
+                            it is conventional to begin with a statistical population or a statistical model to be
+                            studied.
+                            Statistics deals with every aspect of data, including the planning of data collection in
+                            terms of
+                            the design of surveys and experiments.
+                            <br>In the statistics, the most important is data. Data are facts and figures that are
+                            collected,
+                            analyzed, and summarized for presentation and interpretation. Sample survey methods are used
+                            to
+                            collect data from observational studies, and experimental design methods are used to collect
+                            data
+                            from experimental studies. The area of descriptive statistics is concerned primarily with
+                            methods
+                            of presenting and interpreting data using graphs, tables, and numerical summaries.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <!--second tab-->
+            <div class="tab-pane" id="probability">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.2 probability</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-2-1">Outcome and Expected Value</a></li>
+                            <li><a href="#section-2-2">Rules</a></li>
+                            <li><a href="#section-2-3">Conditional Probability</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-2-1">Outcome and Expected Value</h2>
+                        <h3>Outcome</h3>
+                        <p> Outcome are the possible event would happen during the experiment ot trial. Each possible
+                            outcome of a particular experiment is unqiue, and different outcomes are mutually exclusive.
+                            All possiable outcomes can form elements of a sample space.
+                        </p>
+                        <p> <b>Example 1</b>
+                            <br>When rolling two dices, what are outcomes?
+                            <br>1 and 1, 1 and 2, 1 and 3, 1 and 4, 1 and 5, 1 and 6
+                            <br>2 and 1, 2 and 2, 2 and 3, 2 and 4, 2 and 5, 2 and 6
+                            <br>3 and 1, 3 and 2, 3 and 3, 3 and 4, 3 and 5, 3 and 6
+                            <br>4 and 1, 4 and 2, 4 and 3, 4 and 4, 4 and 5, 4 and 6
+                            <br>5 and 1, 5 and 2, 5 and 3, 5 and 4, 5 and 5, 5 and 6
+                            <br>6 and 1, 6 and 2, 6 and 3, 6 and 4, 6 and 5, 6 and 6
+                        </p>
+                        <p> <b>Example 2</b>
+                            <br>when picking two balls together from a basket with two white balls, three red balls,
+                            and six green balls in it, what are outcomes?
+                            <br>white and white, white and red, red and red, red and green, white and green, green and
+                            green.
+                        </p>
+                        <h3>Expected Value</h3>
+                        <p> the expected value of a random variable <b>X</b>, denoted <b>E(X)</b> or <b>E[X]</b>, is a
+                            generalization of the weighted average, and is intuitively the arithmetic mean of a large
+                            number of independent realizations of <b>X</b>.
+                            <br><b>Expected Value = sum of (probability of an event * outcome)</b>
+                            <br> E(X) = Σ(P(X) * X)
+                        </p>
+                        <p> <b>Example 1</b>
+                            <br> If you take 20 questions multiple choice test with A, B, C, D as the answers, and you
+                            guess all 'A', what is the expected value?
+                            <br> When we guess answer is 'A', we can expect the probability of guessing right is
+                            25%(0.25).
+                            There are 20 question, then the expected value is
+                            <br>E(A) = P(A) * n = 0.25 * 20 = 5
+                        </p>
+                        <p> <b>Example 2</b>
+                            <br> When you are rolling a dice, what is the expected value?
+                            <br> The possible outsomes are 1, 2, 3, 4, 5, 6. The probability of each outcome is 1/6.
+                            The expected value is
+                            <br> E[X] = 1/6 * 1 + 1/6 * 2 + 1/6 * 3 + 1/6 * 4 + 1/6 * 5 + 1/6 * 6 = 3.5
+                        </p>
+
+                        <hr>
+                        <h2 id="section-2-2">Rules</h2>
+                        <P>Thre are some rules in probability.
+                            <br> 1. If an event A certainly will happen, then its probability is 1. P(A) = 1.
+                            <br> 2. If an event A certainly will not happen, then its probability is 0. P(A) = 0.
+                            <br> 3. complement events: if A denotes the event certainly will happen, then A¯ denotes
+                            The event certainly will not happen. P(A) + P(A¯) = 1.
+                            <br> 4. If event A belongs to event B, it means when event A happened, event B must
+                            happened.
+                            It shows A ⊂ B.
+                            <img class="BelongImg" , src='static/img1.png' , alt="ABelongB">
+                            <br> If event A belongs to event B, and event B belongs to event A, then event A is same
+                            with
+                            event B.
+                            <br> 5. The set of all elements belongs to A, or to B, or to both. it called the union of A
+                            and B. It shows A ∪ B
+                            <img class="UnionImg" , src="static/img2.png" , alt="AUnionB">
+                            <br> 6. The set of all elements belongs to A and to B, it called the intersection of A and
+                            B.
+                            It shows A ∩ B.
+                            <img class="InterImg" , src="static/img3.png" , alt="AInterB">
+                            <br> 7. The sum of the probability of each event occurring is equal to one.
+                            <br> 8. Addition rule: if A and B represent two mutually exclusive events, then
+                            <br> P(A or B) = P(A) + P(B)
+                            <img class="AddImg" , src="static/img4.png" , alt="AAdditionB">
+                            <br> 9. Multiplication rule: if A and B represent two independent events, then
+                            <br> P(A and B) = P(A) * P(B)
+                        </P>
+                        <hr>
+                        <h2 id="section-2-3">Conditional Probability</h2>
+                        <p> Conditional Probability is the probability of one event occurring with some relationship
+                            to one or more other events. The formula of conditional probability.
+                            <br> P(B|A) = P(A and B) / P(A)
+                        </p>
+                        <P> <b>Example </b>
+                            <br>There is a set of poker card except jokers. If you pick one card which is five, what is
+                            the
+                            probability that this card is heart or club?
+                            <br>Step 1: the probability of pick one card with five is
+                            <br>P(A) = 4/52 = 1/13
+                            <br>Step 2: the probability of pick one card is heart five or club five is
+                            <br>P(A and B) = 2/52 = 1/26
+                            <br>Step 3: Use formula to get answer
+                            <br>P(B|A) = P(A and B) / P(A) = (1/26) / (1/13) = 1/2
+                        </P>
+                        <hr>
+                        <h2><a href="{{ url_for('test',numberpage=page1) }}">Test</a> yourself for this module
+                        </h2>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!--third tab-->
+            <div class="tab-pane" id="statistics">
+                <div class="row">
+                    <div class="content-title">
+                        <h1>Part.3 Statistics</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3" id="myScrollspy">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li class="active"><a href="#section-3-1">Discrete and Continuous Variables</a></li>
+                            <li><a href="#section-3-2">Expected Value and Variance</a></li>
+                            <li><a href="#section-3-3">Distributions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 id="section-3-1">Discrete and Continuous Variables</h2>
+                        <p> <b>Discrete Variables</b> are numeric variables that have a countable number of values 
+                            between any two values. A discrete variable is always numeric.
+                            <br> <b>Continuous Variables</b> are numeric variables that have 
+                            an infinite number of values between any two values. A continuous variable can be numeric 
+                            or date/time.
+                        </p>
+                        <p> <b>Example</b>
+                            <br>The number of coins, the number of customer, and the number of cups are countable, so they
+                            are <b>Discrete Variables</b>. 
+                            <br>Time, the length of road, and the weight of rock are not countable, so they are <b>Continuous
+                            Variables</b>. 
+                        </p>
+                        <h2 id="section-3-2">Expected Value and Variance</h2>
+                        <h3>Expected Value</h3>
+                        <p>The expected value in statistics is same with the expected value in probability. The expected value 
+                            of a random variable <b>X</b>, denoted <b>E(X)</b> or <b>E[X]</b>, is a generalization of the weighted 
+                            average, and is intuitively the arithmetic mean of a large number of independent realizations of <b>X</b>.
+                            <br> For discrete variable, the formula is 
+                            <br> E(X) = Σ(P(X) * X)
+                            <br> For continuous variable, the formula is
+                            <br> <img class="EVimg", src='img5.png', alt="EV">
+                        </p>
+                        <h3>Variance</h3>
+                        <p>Variance is the expectation of the squared deviation of a random variable from its mean. In other words, 
+                            it measures how far a set of numbers is spread out from their average value.
+                            <br> For discrete variable, the formula is 
+                            <br> Var(X) = <sup>1</sup>&frasl;<sup>n</sup> Σ((X-E(X))&#178)
+                            <br> For continuous variable, the formula is
+                            <br> <img class="Varimg", src='static/img6.png', alt="Var"> 
+                        </p>
+                        <p> <b>Example</b>
+                            <br> We have a function of x, the function is
+                            <br> <img class="Function", src='static/img7.png', alt="Func"> 
+                            <br> What is the expected value and variance for it?
+                            <br> <b>Except Value</b>
+                            <br> <img class="Step1", src='static/img8.png', alt="EVstep1"> 
+                            <br><b>Variance</b>
+                            <br> <img class="Step2", src='static/img9.png', alt="Varstep2"> 
+                            <br> <img class="Step3", src='static/img10.png', alt="Varstep3"> 
+                        </p>
+                        <h2 id="section-3-3">Distributions</h2>
+                        <p>a probability distribution is the mathematical function that gives the probabilities of occurrence of different 
+                            possible outcomes for an experiment. It is a mathematical description of a random phenomenon in terms of 
+                            its sample space and the probabilities of events.
+                            <br>There are many types of distribution in statistics.
+                            <br><b>Some types of distribution</b>
+                            <br><b>Normal Distribution</b>
+                            <br> <img class="NorImage", src='static/img11.gif', alt="Normal"> 
+                            <br><b>Uniform Distribution</b>
+                            <br> <img class="UniImage", src='static/img12.gif', alt="Uniform"> 
+                            <br><b>Exponential Distribution</b>
+                            <br> <img class="ExpImage", src='static/img13.gif', alt="Expon"> 
+                            <br><b>Lognormal Distribution</b>
+                            <br> <img class="LogImage", src='staticimg14.gif', alt="Logno"> 
+                            <br><b>Gamma Distribution</b>
+                            <br> <img class="GammaImage", src='static/img15.gif', alt="Gamma"> 
+                        </p>
+                        <hr>
+                        <h2><a href="{{ url_for('test',numberpage=page2) }}">Test</a> yourself for this module
+                        </h2>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
