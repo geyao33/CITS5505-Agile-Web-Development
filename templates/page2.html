@@ -70,120 +70,134 @@
                     <div class="col-xs-8">
                         <!-- add to favor or drop-->
                         <p>
+                            <br>
+                        <h4>Here you can add this page to your favor.</h4>
                         <form method="post" action='/test/page2'>
                             <input type="submit" value="favor">
                         </form>
-                        {% if MSG %}c
-                        <p>{{MSG}}</p>
+                        {% if MSG %}
+                        <h4>{{MSG}}</h4>
                         {% endif %}
                         </p>
                         <hr>
 
-                    <dev class="question1">
-                        <h2 id="section-1-1">Question1</h2>
-                        <h4>Y is the number of candy in a randomly chosen bag?
-                        </h4>
-                        <p>Is the random variable Y is discrete or continous?</p>
-                        <hr >
-
-                        <div id='discrete'>
-                            <input type='radio' name='option1' value='discrete'>
-                            discrete
+                        <div class="question1">
+                            <h2 id="section-1-1">Question1</h2>
+                            <h4>Y is the number of candy in a randomly chosen bag?
+                            </h4>
+                            <h4>Is the random variable Y is discrete or continous?</h4>
+                            <br>
+                            <div id='discrete'>
+                                <input type='radio' name='option1' value='discrete'>
+                                discrete
+                            </div>
+                            <br>
+                            <div id='continous'>
+                                <input type='radio' name='option1' value='continous'>
+                                continous
+                            </div>
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br><input type='button' value='Submit'
+                                onclick='multipleAnswer("discrete", "a1", "option1")'>
+                            <br><span id='a1'></span>
                         </div>
                         <hr>
+                        <div class="question2">
+                            <h2 id="section-1-2">Question2</h2>
+                            <h4>X is the time that a randomly picked student spent in the task.
+                            </h4>
+                            <h4>Is the random variable X is discrete or continous?</h4>
+                            <br>
 
-                        <div id='continous'>
-                            <input type='radio' name='option1' value='continous'>
-                            continous
+                            <div id='Discrete'>
+                                <input type='radio' name='option2' value='Discrete'>
+                                Discrete
+                            </div>
+                            <br>
+
+                            <div id='Continous'>
+                                <input type='radio' name='option2' value='Continous'>
+                                Continous
+                            </div>
+
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br><input type='button' value='Submit'
+                                onclick='multipleAnswer("Continous", "a2", "option2")'>
+                            <br><span id='a2'></span>
                         </div>
                         <hr>
+                        <div class='question3'>
+                            <h2 id="section-1-3">Question3</h2>
+                            <h4> We have a following function.</h4>
+                            <br> <img class="EVCQue" , src='../static/img18.png' , alt="EVCQuestion">
+                            <br><label for="question3">The Expected Value of this funcion is (input fraction
+                                answer)</label>
+                            <br><input type="text" id="question3" name="question3">
 
-                        <br><span id='a1'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("discrete", "a1", "option1")'>
-                    </dev>
-
-                    <dev class="question2">
-                        <h2 id="section-1-2">Question2</h2>
-                        <h4>X is the time that a randomly picked student spent in the task.
-                        </h4>
-                        <p>Is the random variable X is discrete or continous?</p>
-                        <hr >
-
-                        <div id='Discrete'>
-                            <input type='radio' name='option2' value='Discrete'>
-                            Discrete
+                            <br>
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br><input type="button" value='Submit' onclick='calAnswer("2/5", "a3", "question3")'>
+                            <br><span id='a3'></span>
+                            <hr>
                         </div>
-                        <hr>
 
-                        <div id='Continous'>
-                            <input type='radio' name='option2' value='Continous'>
-                            Continous
+                        <div class='question4'>
+                            <h2 id="section-1-4">Question4</h2>
+                            <h4> We have a following function.</h4>
+                            <br> <img class="VarCQue" , src='../static/img19.png' , alt="VarCQuestion">
+                            <br><label for="question4">The Variance of this funcion is (input fraction answer)</label>
+                            <br><input type="text" id="question4" name="question4">
+
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+
+                            <br><input type="button" value='Submit' onclick='calAnswer("1/18", "a4", "question4")'>
+                            <br><span id='a4'></span>
+                            <hr>
                         </div>
-                        <hr>
 
-                        <br><span id='a2'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("Continous", "a2", "option2")'>
-                    </dev>
+                        <div class='question5'>
+                            <h2 id="section-1-5">Question5</h2>
+                            <h4>We have a following graph</h4>
+                            <br> <img class="DisQue" , src='../static/img20.png' , alt="DisQuestion">
+                            <h4>What kind of distribution is it?</h4>
+                            <br>
 
-                    <div class = 'question3'>
-                        <h2 id="section-1-3">Question3</h2>
-                        <h4> We have a following function.</h4>
-                        <br> <img class="EVCQue", src='../static/img18.png', alt="EVCQuestion"> 
-                        <br><label for="question3">The Expected Value of this funcion is (input fraction answer)</label>
-                        <br><input type="text" id="question3" name="question3">
-                        <hr>
+                            <div id='Uniform Distribution'>
+                                <input type='radio' name='option5' value='Uniform Distribution'>
+                                Uniform Distribution
+                            </div>
+                            <br>
 
-                        <br><span id='a3'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("2/5", "a3", "question3")'>
-                    </div>
+                            <div id='Exponential Distribution'>
+                                <input type='radio' name='option5' value='Exponential Distribution'>
+                                Exponential Distribution
+                            </div>
+                            <br>
 
-                    <div class = 'question4'>
-                        <h2 id="section-1-4">Question4</h2>
-                        <h4> We have a following function.</h4>
-                        <br> <img class="VarCQue", src='../static/img19.png', alt="VarCQuestion"> 
-                        <br><label for="question4">The Variance of this funcion is (input fraction answer)</label>
-                        <br><input type="text" id="question4" name="question4">
-                        <hr>
+                            <div id='Normal Distribution'>
+                                <input type='radio' name='option5' value='Normal Distribution'>
+                                Normal Distribution
+                            </div>
+                            <br>
 
-                        <br><span id='a4'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("1/18", "a4", "question4")'>
-                    </div>
-
-                    <div class = 'question5'>
-                        <h2 id="section-1-5">Question5</h2>
-                        <h4>We have a following graph</h4>
-                        <br> <img class="DisQue", src='../static/img20.png', alt="DisQuestion">
-                        <h4>What kind of distribution is it?</h4>
-                        <br><p>Choose 1 answer</p>
-                        <hr>
-                        
-                        <div id='Uniform Distribution'>
-                            <input type='radio' name='option5' value='Uniform Distribution'>
-                            Uniform Distribution
+                            <div id='None of above'>
+                                <input type='radio' name='option5' value='None of above'>
+                                None of above
+                            </div>
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br><input type='button' value='Submit'
+                                onclick='multipleAnswer("Normal Distribution", "a5", "option5")'>
+                            <br><span id='a5'></span>
+                            <hr>
+                            <br>
+                            <br>
+                            <br>
                         </div>
-                        <hr>
-
-                        <div id='Exponential Distribution'>
-                            <input type='radio' name='option5' value='Exponential Distribution'>
-                            Exponential Distribution
-                        </div>
-                        <hr>
-
-                        <div id='Normal Distribution'>
-                            <input type='radio' name='option5' value='Normal Distribution'>
-                            Normal Distribution
-                        </div>
-                        <hr>
-
-                        <div id='None of above'>
-                            <input type='radio' name='option5' value='None of above'>
-                            None of above
-                        </div>
-                        <hr>
-
-                        <br><span id='a5'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("Normal Distribution", "a5", "option5")'>
-                    </div>
                     </div>
                 </div>
             </div>

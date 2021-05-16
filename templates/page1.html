@@ -70,123 +70,138 @@
                     <div class="col-xs-8">
                         <!-- add to favor or drop-->
                         <p>
+                            <br>
+                        <h4>Here you can add this page to your favor.</h4>
                         <form method="post" action='/test/page1'>
-                            <input type="submit" vaEVQuelue="favor">
+                            <input type="submit" value="favor">
                         </form>
                         {% if MSG %}
-                        <p>{{MSG}}</p>
+                        <h4>{{MSG}}</h4>
                         {% endif %}
                         </p>
                         <hr>
 
-                    <div class = 'question1'>
-                        <h2 id="section-1-1">Question1</h2>
-                        <h4>What is the complement of P(X)?
-                        </h4>
-                        <p>Choose 1 answer</p>
-                        <hr>
+                        <div class='question1'>
+                            <h2 id="section-1-1">Question1</h2>
+                            <h4>What is the complement of P(X)?
+                            </h4>
+                            <hr>
 
-                        <div id='1-P(X)'>
-                        <input type='radio' name='option1' value='1-P(X)'>
-                        1-P(X)
+                            <div id='1-P(X)'>
+                                <input type='radio' name='option1' value='1-P(X)'>
+                                1-P(X)
+                            </div>
+                            <br>
+
+                            <div id='1+P(X)'>
+                                <input type='radio' name='option1' value='1+P(X)'>
+                                1+P(X)
+                            </div>
+                            <br>
+
+                            <div id='1/P(X)'>
+                                <input type='radio' name='option1' value='1/P(X)'>
+                                1/P(X)
+                            </div>
+                            <br>
+
+                            <div id='None of these'>
+                                <input type='radio' name='option1' value='None of these'>
+                                None of these
+                            </div>
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+
+                            <br> <input type='button' value='Submit'
+                                onclick='multipleAnswer("1-P(X)", "a1", "option1")'>
+                            <br><span id='a1'></span>
                         </div>
                         <hr>
-
-                        <div id='1+P(X)'>
-                        <input type='radio' name='option1' value='1+P(X)'>
-                        1+P(X)
+                        <div class='question2'>
+                            <h2 id="section-1-2">Question2</h2>
+                            <h4>Two dice are rolled, what is the probability that the sum is 6?
+                            </h4>
+                            <label for="question2">The answer is (input fraction answer)</label>
+                            <br>
+                            <input type="text" id="question2" name="question2">
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br> <input type="button" value='Submit' onclick='calAnswer("1/6", "a2", "question2")'>
+                            <br><span id='a2'></span>
                         </div>
                         <hr>
-
-                        <div id='1/P(X)'>
-                        <input type='radio' name='option1' value='1/P(X)'>
-                        1/P(X)
+                        <div class='question3'>
+                            <h2 id="section-1-3">Question3</h2>
+                            <h4>X is a discrete random variable. The graph below defines a probability distribution for
+                                X.</h4>
+                            <br> <img class="EVQue" , src='../static/img16.png' , alt="EVQuestion">
+                            <br>
+                            <label for="question3">What is the expected value of X?</label>
+                            <br><input type="text" id="question3" name="question3">
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+                            <br><input type="button" value='Submit' onclick='calAnswer("0", "a3", "question3")'>
+                            <br><span id='a3'></span>
                         </div>
                         <hr>
+                        <div class='question4'>
+                            <h2 id="section-1-4">Question4</h2>
+                            <h4>If there is a set of poker except joker cards, what is the probability that picking a
+                                card which
+                                is red and 10?
+                            </h4>
+                            <br>
 
-                        <div id='None of these'>
-                        <input type='radio' name='option1' value='None of these'>
-                        None of these
+                            <dev id='1/2'>
+                                <input type='radio' name='option4' value='1/2'>
+                                1/2
+                            </dev>
+                            <br>
+
+                            <br>
+                            <dev id='1/26'>
+                                <input type='radio' name='option4' value='1/26'>
+                                1/26
+                            </dev>
+                            <br>
+
+                            <br>
+                            <dev id='0'>
+                                <input type='radio' name='option4' value='0'>
+                                0
+                            </dev>
+                            <br>
+
+                            <br>
+                            <dev id='1/52'>
+                                <input type='radio' name='option4' value='1/52'>
+                                1/52
+                            </dev>
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
+
+                            <br> <input type='button' value='Submit' onclick='multipleAnswer("1/26", "a4", "option4")'>
+                            <br><span id='a4'></span>
                         </div>
                         <hr>
+                        <div class='question5'>
+                            <h2 id="section-1-5">Question5</h2>
+                            <h4> This question is using the following table, What is the probability a randomly selected
+                                person is
+                                female, given that they own a pet?</h4>
+                            <br> <img class="CPQue" , src='../static/img17.png' , alt="CPQuestion">
+                            <br><label for="question5">The answer is (round answer to 2 decimals)</label>
+                            <br><input type="text" id="question5" name="question5">
+                            <hr align="left" width="20%"
+                                style="height:1px;border:none;border-top:1px dashed #99c7f5c4;">
 
-                        <br><span id='a1'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("1-P(X)", "a1", "option1")'>
-                    </div>
-
-                    <div class = 'question2'>
-                        <h2 id="section-1-2">Question2</h2>
-                         <h4>Two dice are rolled, what is the probability that the sum is 6?
-                        </h4>
-                        <label for="question2">The answer is (input fraction answer)</label>
-                        <input type="text" id="question2" name="question2">
+                            <br> <input type="button" value='Submit' onclick='calAnswer("0.88", "a5", "question5")'>
+                            <br><span id='a5'></span>
+                        </div>
                         <hr>
-
-                        <br><span id='a2'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("1/6", "a2", "question2")'>
-                    </div>
-
-                    <div class = 'question3'>
-                        <h2 id="section-1-3">Question3</h2>
-                        <h4>X is a discrete random variable. The graph below defines a probability distribution for X.</h4>
-                        <label for="question3">What is the expected value of X?</label>
-                        <input type="text" id="question3" name="question3">
-                        <br> <img class="EVQue", src='../static/img16.png', alt="EVQuestion"> 
-                        <hr>
-
-                        <br><span id='a3'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("0", "a3", "question3")'>
-                    </div>
-
-                    <div class = 'question4'>
-                        <h2 id="section-1-4">Question4</h2>
-                        <h4>If there is a set of poker except joker cards, what is the probability that picking a card which
-                            is red and 10?
-                        </h4>
-                        <p>Choose 1 answer</p>
-                        <hr>
-
-                        <dev id='1/2'>
-                        <input type='radio' name='option4' value='1/2'>
-                        1/2
-                        </dev>
-                        <hr>
-                        
-                        <dev id='1/26'>
-                        <input type='radio' name='option4' value='1/26'>
-                        1/26
-                        </dev>
-                        <hr>
-
-                        <dev id='0'>
-                        <input type='radio' name='option4' value='0'>
-                        0
-                        </dev>
-                        <hr>
-
-                        <dev id='1/52'>
-                        <input type='radio' name='option4' value='1/52'>
-                        1/52
-                        </dev>
-                        <hr>
-                        
-                        <br><span id='a4'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("1/26", "a4", "option4")'>
-                    </div>
-
-                    <div class='question5'>
-                        <h2 id="section-1-5">Question5</h2>
-                        <h4> This question is using the following table, What is the probability a randomly selected person is 
-                            female, given that they own a pet?</h4>
-                        <label for="question5">The answer is (round answer to 2 decimals)</label>
-                        <input type="text" id="question5" name="question5">
-                        <br> <img class="CPQue", src='../static/img17.png', alt="CPQuestion"> 
-                        <hr>
-
-                        <br><span id='a5'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("0.88", "a5", "question5")'>
-                    </div>
-                    
+                        <br>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
