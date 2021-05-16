@@ -1,11 +1,16 @@
 var multipleAnswer = function(rightans, span, options) {
     var spanname = document.getElementById(span)
     var opt = document.getElementsByName(options)
-
+    var numofchose = 0
     for(i = 0; i < opt.length; i++) {
         if(opt[i].checked){
         valuer = opt[i].value
+        numofchose = 1
         }
+    }
+    
+    if(numofchose == 0) {
+        spanname.innerHTML = '<h4> Please pick an option!</h4>';
     }
 
     var choop = document.getElementById(valuer);
