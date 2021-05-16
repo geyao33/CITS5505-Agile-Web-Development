@@ -79,114 +79,117 @@
                         </p>
                         <hr>
 
-                    <div class = 'question1'>
-                        <h2 id="section-1-1">Question1</h2>
-                        <h4>What is the complement of P(X)?
-                        </h4>
-                        <p>Choose 1 answer</p>
-                        <hr>
+                        <div class='question1'>
+                            <h2 id="section-1-1">Question1</h2>
+                            <h4>What is the complement of P(X)?
+                            </h4>
+                            <p>Choose 1 answer</p>
+                            <hr>
 
-                        <div id='1-P(X)'>
-                        <input type='radio' name='option' value='1-P(X)'>
-                        1-P(X)
+                            <div id='1-P(X)'>
+                                <input type='radio' name='option' value='1-P(X)'>
+                                1-P(X)
+                            </div>
+                            <hr>
+
+                            <div id='1+P(X)'>
+                                <input type='radio' name='option' value='1+P(X)'>
+                                1+P(X)
+                            </div>
+                            <hr>
+
+                            <div id='1/P(X)'>
+                                <input type='radio' name='option' value='1/P(X)'>
+                                1/P(X)
+                            </div>
+                            <hr>
+
+                            <div id='None of these'>
+                                <input type='radio' name='option' value='None of these'>
+                                None of these
+                            </div>
+                            <hr>
+
+                            <br><span id='a1'></span>
+                            <br> <input type='button' value='Submit' onclick='multipleAnswer("1-P(X)", "a1")'>
                         </div>
-                        <hr>
 
-                        <div id='1+P(X)'>
-                        <input type='radio' name='option' value='1+P(X)'>
-                        1+P(X)
+                        <div class='question2'>
+                            <h2 id="section-1-2">Question2</h2>
+                            <h4>Two dice are rolled, what is the probability that the sum is 6?
+                            </h4>
+                            <label for="question2">The answer is (input fraction answer)</label>
+                            <input type="text" id="question2" name="question2">
+                            <hr>
+
+                            <br><span id='a2'></span>
+                            <br> <input type="button" value='Submit' onclick='calAnswer("1/6", "a2", "question2")'>
                         </div>
-                        <hr>
 
-                        <div id='1/P(X)'>
-                        <input type='radio' name='option' value='1/P(X)'>
-                        1/P(X)
+                        <div class='question3'>
+                            <h2 id="section-1-3">Question3</h2>
+                            <h4>X is a discrete random variable. The graph below defines a probability distribution for
+                                X.</h4>
+                            <label for="question3">What is the expected value of X?</label>
+                            <input type="text" id="question3" name="question3">
+                            <br> <img class="EVQue" , src='../static/img16.png' , alt="EVQuestion">
+                            <hr>
+
+                            <br><span id='a3'></span>
+                            <br> <input type="button" value='Submit' onclick='calAnswer("0", "a3", "question3")'>
                         </div>
-                        <hr>
 
-                        <div id='None of these'>
-                        <input type='radio' name='option' value='None of these'>
-                        None of these
+                        <div class='question4'>
+                            <h2 id="section-1-4">Question4</h2>
+                            <h4>If there is a set of poker except joker cards, what is the probability that picking a
+                                card which
+                                is red and 10?
+                            </h4>
+                            <p>Choose 1 answer</p>
+                            <hr>
+
+                            <dev id='1/2'>
+                                <input type='radio' name='option' value='1/2'>
+                                1/2
+                            </dev>
+                            <hr>
+
+                            <dev id='1/26'>
+                                <input type='radio' name='option' value='1/26'>
+                                1/26
+                            </dev>
+                            <hr>
+
+                            <dev id='0'>
+                                <input type='radio' name='option' value='0'>
+                                0
+                            </dev>
+                            <hr>
+
+                            <dev id='1/52'>
+                                <input type='radio' name='option' value='1/52'>
+                                1/52
+                            </dev>
+                            <hr>
+
+                            <br><span id='a4'></span>
+                            <br> <input type='button' value='Submit' onclick='multipleAnswer("1/26", "a4")'>
                         </div>
-                        <hr>
 
-                        <br><span id='a1'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("1-P(X)", "a1")'>
-                    </div>
+                        <div class='question5'>
+                            <h2 id="section-1-5">Question5</h2>
+                            <h4> This question is using the following table, What is the probability a randomly selected
+                                person is
+                                female, given that they own a pet?</h4>
+                            <label for="question5">The answer is (round answer to 2 decimals)</label>
+                            <input type="text" id="question5" name="question5">
+                            <br> <img class="CPQue" , src='../static/img17.png' , alt="CPQuestion">
+                            <hr>
 
-                    <div class = 'question2'>
-                        <h2 id="section-1-2">Question2</h2>
-                         <h4>Two dice are rolled, what is the probability that the sum is 6?
-                        </h4>
-                        <label for="question2">The answer is (input fraction answer)</label>
-                        <input type="text" id="question2" name="question2">
-                        <hr>
+                            <br><span id='a5'></span>
+                            <br> <input type="button" value='Submit' onclick='calAnswer("0.88", "a5", "question5")'>
+                        </div>
 
-                        <br><span id='a2'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("1/6", "a2", "question2")'>
-                    </div>
-
-                    <div class = 'question3'>
-                        <h2 id="section-1-3">Question3</h2>
-                        <h4>X is a discrete random variable. The graph below defines a probability distribution for X.</h4>
-                        <label for="question3">What is the expected value of X?</label>
-                        <input type="text" id="question3" name="question3">
-                        <br> <img class="EVQue", src='../static/img16.png', alt="EVQuestion"> 
-                        <hr>
-
-                        <br><span id='a3'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("0", "a3", "question3")'>
-                    </div>
-
-                    <div class = 'question4'>
-                        <h2 id="section-1-4">Question4</h2>
-                        <h4>If there is a set of poker except joker cards, what is the probability that picking a card which
-                            is red and 10?
-                        </h4>
-                        <p>Choose 1 answer</p>
-                        <hr>
-
-                        <dev id='1/2'>
-                        <input type='radio' name='option' value='1/2'>
-                        1/2
-                        </dev>
-                        <hr>
-                        
-                        <dev id='1/26'>
-                        <input type='radio' name='option' value='1/26'>
-                        1/26
-                        </dev>
-                        <hr>
-
-                        <dev id='0'>
-                        <input type='radio' name='option' value='0'>
-                        0
-                        </dev>
-                        <hr>
-
-                        <dev id='1/52'>
-                        <input type='radio' name='option' value='1/52'>
-                        1/52
-                        </dev>
-                        <hr>
-                        
-                        <br><span id='a4'></span>
-                        <br> <input type='button' value='Submit' onclick='multipleAnswer("1/26", "a4")'>
-                    </div>
-
-                    <div class='question5'>
-                        <h2 id="section-1-5">Question5</h2>
-                        <h4> This question is using the following table, What is the probability a randomly selected person is 
-                            female, given that they own a pet?</h4>
-                        <label for="question5">The answer is (round answer to 2 decimals)</label>
-                        <input type="text" id="question5" name="question5">
-                        <br> <img class="CPQue", src='../static/img17.png', alt="CPQuestion"> 
-                        <hr>
-
-                        <br><span id='a5'></span>
-                        <br> <input type="button" value='Submit' onclick='calAnswer("0.88", "a5", "question5")'>
-                    </div>
-                    
                     </div>
                 </div>
             </div>
