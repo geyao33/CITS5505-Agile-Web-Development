@@ -1,6 +1,6 @@
-var multipleAnswer = function(rightans, span) {
+var multipleAnswer = function(rightans, span, options) {
     var spanname = document.getElementById(span)
-    var opt = document.getElementsByName('option')
+    var opt = document.getElementsByName(options)
 
     for(i = 0; i < opt.length; i++) {
         if(opt[i].checked){
